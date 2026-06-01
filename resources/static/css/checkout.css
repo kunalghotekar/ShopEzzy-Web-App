@@ -1,0 +1,150 @@
+/* ===================================
+   CHECKOUT PAGE STYLING
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+
+    url('/images/box7_image.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+
+.checkout-container{
+
+    width:100%;
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+/* ===================================
+   CHECKOUT CARD
+=================================== */
+
+.checkout-card{
+
+    width:450px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===================================
+   HEADING
+=================================== */
+
+.checkout-card h1{
+
+    font-size:38px;
+
+    color:#222;
+
+    margin-bottom:30px;
+}
+
+/* ===================================
+   TOTAL AMOUNT
+=================================== */
+
+.checkout-card h2{
+
+    font-size:30px;
+
+    color:#198754;
+
+    margin-bottom:35px;
+}
+
+/* ===================================
+   PLACE ORDER BUTTON
+=================================== */
+
+.checkout-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    background:#198754;
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.checkout-btn:hover{
+
+    background:#157347;
+
+    transform:translateY(-2px);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:500px){
+
+    .checkout-card{
+
+        width:90%;
+
+        padding:30px 20px;
+    }
+
+    .checkout-card h1{
+
+        font-size:30px;
+    }
+
+    .checkout-card h2{
+
+        font-size:24px;
+    }
+}

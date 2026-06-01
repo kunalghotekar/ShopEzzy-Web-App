@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Add Product</title>
+
+    <link rel="stylesheet"
+      th:href="@{/css/product-form.css}">
+          
+          <link rel="stylesheet"
+          th:href="@{/css/navbar.css}">
+
+</head>
+
+<body>
+
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+
+<form th:action="@{/saveProduct}"
+      th:object="${product}"
+      method="post">
+
+    <h2>Add Product</h2>
+
+    <input type="text"
+           th:field="*{name}"
+           placeholder="Product Name">
+
+    <textarea th:field="*{description}"
+              placeholder="Description">
+    </textarea>
+
+    <input type="number"
+           th:field="*{price}"
+           placeholder="Price">
+
+    <input type="number"
+           th:field="*{quantity}"
+           placeholder="Quantity">
+
+    <input type="text"
+           th:field="*{imageUrl}"
+           placeholder="Image URL">
+
+    <button type="submit">
+        Save Product
+    </button>
+
+</form>
+
+</div>
+
+</body>
+</html>

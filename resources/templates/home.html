@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+    <title>Home</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/home.css}">
+<link rel="stylesheet"
+          th:href="@{/css/navbar.css}">
+</head>
+
+<body>
+
+<header>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="pannel">
+<div class="pannel-ops"> 
+ <p>
+     <b>ShopEzzy</b>,  your one - stop online shop for everything you need.
+    </p>
+     
+</div>
+
+<div class="pannel-deals">
+
+ <!-- SHOW USERNAME -->
+ 
+<h2 th:if="${username != null}">
+
+        Welcome,
+        <span th:text="${username}">
+        </span>
+
+    </h2>
+</div>
+</div>
+</header>
+
+<div class="hero-section">
+        <div class="hero-msg">
+            <p>you are on shopEzzy.com. You can also shop on shopEzzy India for millions of product with fast local
+                delivery. <a>Click here to go to shopEzzy.in</a></p>
+                
+        </div>
+    </div>
+    <div class="shop-section">
+        <div class="box">
+            <div class="box-content">
+                <h2>Clothes</h2>
+                <div class="box-img" style="background-image: url('../images/box1_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-content">
+                <h2>Health, Personal Care</h2>
+                <div class="box-img" style="background-image: url('../images/box2_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Furniture</h2>
+                <div class="box-img" style="background-image: url('../images/box3_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Electronics</h2>
+                <div class="box-img" style="background-image: url('../images/box4_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+
+         <div class="box">
+            <div class="box-content">
+                <h2>Make-Up</h2>
+                <div class="box-img" style="background-image: url('../images/box5_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-content">
+                <h2>Pets Care</h2>
+                <div class="box-img" style="background-image: url('../images/box6_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>New Arrival in Toys</h2>
+                <div class="box-img" style="background-image: url('../images/box7_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-content">
+                <h2>Discover Fassion Trend</h2>
+                <div class="box-img" style="background-image: url('../images/box8_image.jpg');"></div>
+                <a href="/products">See more</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <div class="foot-panel1">
+        Back to Top
+      </div>
+      <div class="foot-panel2">
+        <ul>
+           <p>Get to Know Us</p>
+           <a>Careers</a>
+           <a>Blog</a>
+           <a>About ShopEzzy</a>
+           <a>Investor Relations</a>
+           <a>ShopEzzy Devices</a>
+           <a>ShopEzzy Science</a>
+        </ul>
+
+        <ul>
+           <p>Get to Know Us</p>
+           <a>Careers</a>
+           <a>Blog</a>
+           <a>About ShopEzzy</a>
+           <a>Investor Relations</a>
+           <a>ShopEzzy Devices</a>
+           <a>ShopEzzy Science</a>
+        </ul>
+
+         <ul>
+           <p>Get to Know Us</p>
+           <a>Careers</a>
+           <a>Blog</a>
+           <a>About ShopEzzy</a>
+           <a>Investor Relations</a>
+           <a>ShopEzzy Devices</a>
+           <a>ShopEzzy Science</a>
+        </ul>
+
+         <ul>
+           <p>Get to Know Us</p>
+           <a>Careers</a>
+           <a>Blog</a>
+           <a>About ShopEzzy</a>
+           <a>Investor Relations</a>
+           <a>ShopEzzy Devices</a>
+           <a>ShopEzzy Science</a>
+        </ul>
+      </div>
+      <div class="foot-panel3">
+        <div class="logo"> 
+             <h1>ShopEzzy</h1>
+        </div>
+      </div>
+      <div class="foot-panel4">
+        <div class="pages">
+          <a>Conditions of Use</a>
+          <a>Privacy Notice</a>
+          <a>Your Ads Privacy Choices</a>
+
+        </div>
+        <div class="copyright">
+                @ 1996-2023, ShopEzzy.com, or its affiliates
+        </div>
+      </div>
+      
+    </footer>
+
+
+
+
+</body>
+</html>

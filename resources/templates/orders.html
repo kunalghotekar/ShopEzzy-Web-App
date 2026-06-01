@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th=
+"http://www.thymeleaf.org">
+
+<head>
+
+    <title>Orders</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/navbar.css}">
+
+    <link rel="stylesheet"
+          th:href="@{/css/orders.css}">
+
+</head>
+
+<body>
+
+<div th:replace=
+"fragments/navbar :: navbar">
+</div>
+
+<div class="container">
+
+    <h1>
+
+        My Orders
+
+    </h1>
+
+    <!-- EMPTY ORDERS -->
+
+    <div class="empty-orders"
+         th:if="${#lists.isEmpty(orders)}">
+
+        No Orders Found
+
+    </div>
+
+    <!-- ORDERS TABLE -->
+
+    <table th:if=
+           "${!#lists.isEmpty(orders)}">
+
+        <tr>
+
+            <th>Order ID</th>
+
+            <th>Total</th>
+
+            <th>Status</th>
+
+            <th>Date</th>
+
+        </tr>
+
+        <tr th:each=
+            "order : ${orders}">
+
+            <!-- ORDER ID -->
+
+            <td th:text=
+                "${order.id}">
+            </td>
+
+            <!-- TOTAL -->
+
+            <td>
+
+                ₹
+                <span th:text=
+                "${order.totalAmount}">
+                </span>
+
+            </td>
+
+            <!-- STATUS -->
+
+            <td>
+
+                <span th:text=
+                "${order.status}"
+
+                th:classappend=
+                "${order.status=='PENDING'}
+                ? 'status-pending' :
+
+                (${order.status=='COMPLETED'}
+                ? 'status-completed' :
+
+                'status-cancelled')">
+
+                </span>
+
+            </td>
+
+            <!-- DATE -->
+
+            <td th:text=
+                "${order.orderDate}">
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

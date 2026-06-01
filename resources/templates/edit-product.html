@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Edit Product</title>
+
+    <link rel="stylesheet"
+      th:href="@{/css/product-form.css}">
+          <link rel="stylesheet"
+          th:href="@{/css/navbar.css}">
+
+</head>
+
+<body>
+
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+
+<form th:action=
+      "@{/updateProduct/{id}(id=${product.id})}"
+
+      th:object="${product}"
+
+      method="post">
+
+    <h2>Edit Product</h2>
+
+    <input type="text"
+           th:field="*{name}">
+
+    <textarea th:field="*{description}">
+    </textarea>
+
+    <input type="number"
+           th:field="*{price}">
+
+    <input type="number"
+           th:field="*{quantity}">
+
+    <input type="text"
+           th:field="*{imageUrl}">
+
+    <button type="submit">
+        Update Product
+    </button>
+
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+/* ===================================
+   LOGIN PAGE STYLING
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+.main{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+
+    url('/images/login-bg.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+/* ===================================
+   LOGIN CONTAINER
+=================================== */
+
+.login-container{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===================================
+   HEADING
+=================================== */
+
+.login-container h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#222;
+
+    font-size:32px;
+}
+
+/* ===================================
+   INPUT FIELDS
+=================================== */
+
+.input-group{
+
+    margin-bottom:20px;
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#444;
+
+    font-weight:bold;
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+.input-group input:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:
+    0 0 5px rgba(13,110,253,0.3);
+}
+
+/* ===================================
+   LOGIN BUTTON
+=================================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    background:#0d6efd;
+
+    color:white;
+
+    font-size:16px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.login-btn:hover{
+
+    background:#0b5ed7;
+}
+
+/* ===================================
+   ERROR MESSAGE
+=================================== */
+
+.error-msg{
+
+    background:#f8d7da;
+
+    color:#842029;
+
+    padding:10px;
+
+    border-radius:5px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+}
+
+/* ===================================
+   SUCCESS MESSAGE
+=================================== */
+
+.success-msg{
+
+    background:#d1e7dd;
+
+    color:#0f5132;
+
+    padding:10px;
+
+    border-radius:5px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+}
+
+/* ===================================
+   REGISTER LINK
+=================================== */
+
+.register-link{
+
+    text-align:center;
+
+    margin-top:20px;
+}
+
+.register-link a{
+
+    color:#0d6efd;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+.register-link a:hover{
+
+    text-decoration:underline;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:500px){
+
+    .login-container{
+
+        width:90%;
+
+        padding:30px 20px;
+    }
+
+    .login-container h2{
+
+        font-size:28px;
+    }
+}

@@ -1,0 +1,161 @@
+/* ===================================
+   REGISTER PAGE STYLING
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+.main{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+
+    url('/images/login-bg.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+
+.container{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+/* ===================================
+   REGISTER FORM
+=================================== */
+
+form{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.2);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* ===================================
+   HEADING
+=================================== */
+
+form h2{
+
+    text-align:center;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+    font-size:32px;
+}
+
+/* ===================================
+   INPUT FIELDS
+=================================== */
+
+form input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+form input:focus{
+
+    border-color:#198754;
+
+    box-shadow:
+    0 0 5px rgba(25,135,84,0.3);
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+form button{
+
+    padding:12px;
+
+    border:none;
+
+    background:#198754;
+
+    color:white;
+
+    font-size:16px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+form button:hover{
+
+    background:#157347;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:500px){
+
+    form{
+
+        width:90%;
+
+        padding:30px 20px;
+    }
+
+    form h2{
+
+        font-size:28px;
+    }
+}

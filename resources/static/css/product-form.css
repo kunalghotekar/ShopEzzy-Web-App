@@ -1,0 +1,178 @@
+/* ===================================
+   PRODUCT FORM PAGE STYLING
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+
+    url('/images/product-bg.jpg');
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+
+.container{
+
+    width:100%;
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+}
+
+/* ===================================
+   FORM CARD
+=================================== */
+
+form{
+
+    width:500px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,0.25);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* ===================================
+   HEADING
+=================================== */
+
+form h2{
+
+    text-align:center;
+
+    font-size:34px;
+
+    color:#222;
+
+    margin-bottom:10px;
+}
+
+/* ===================================
+   INPUT FIELDS
+=================================== */
+
+form input,
+form textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+/* TEXTAREA */
+
+form textarea{
+
+    resize:none;
+
+    height:120px;
+}
+
+/* FOCUS EFFECT */
+
+form input:focus,
+form textarea:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:
+    0 0 5px rgba(13,110,253,0.3);
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+form button{
+
+    padding:14px;
+
+    border:none;
+
+    background:rgb(0, 0, 72);
+
+    color:white;
+
+    font-size:17px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+form button:hover{
+
+    background:#157347;
+
+    transform:translateY(-2px);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:600px){
+
+    form{
+
+        width:95%;
+
+        padding:30px 20px;
+    }
+
+    form h2{
+
+        font-size:28px;
+    }
+}

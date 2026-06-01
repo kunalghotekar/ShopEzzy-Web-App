@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Products</title>
+
+    <link rel="stylesheet"
+          th:href="@{/css/products.css}">
+          
+          <link rel="stylesheet"
+          th:href="@{/css/navbar.css}">
+
+</head>
+
+<body>
+
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+
+    <!-- PAGE TITLE -->
+
+    <h1 class="page-title">
+
+        All Products
+
+    </h1>
+
+    <!-- TOP SECTION -->
+
+    <div class="top-bar">
+
+        <!-- ADD PRODUCT BUTTON -->
+
+        <a href="/addProduct">
+
+            <button class="add-product-btn">
+
+                Add Product
+
+            </button>
+
+        </a>
+
+        <!-- SEARCH FORM -->
+
+        <form action="/search"
+              method="get"
+
+              class="search-container">
+
+            <input type="text"
+                   name="keyword"
+                   placeholder="Search Product">
+
+            <button type="submit">
+
+                Search
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+    <br><br>
+
+    <div class="product-grid">
+
+        <div class="card"
+             th:each="product : ${products}">
+
+            <img th:src="${product.imageUrl}">
+            
+             <div class="card-content">
+             
+            <h2 class="product-name"
+                th:text="${product.name}">
+            </h2>
+
+            <p class="product-description"
+               th:text="${product.description}">
+            </p>
+
+
+            <h3 class="product-price">
+
+                ₹
+                <span th:text="${product.price}">
+                </span>
+
+            </h3>
+
+            <p class="product-quantity">
+
+                Quantity :
+                <span th:text="${product.quantity}">
+                </span>
+
+            </p>
+
+           <div class="button-group">
+            
+            <!-- ADD TO CART BUTTON -->
+
+        <form th:action=
+              "@{/addToCart/{id}(id=${product.id})}"
+
+              method="post">
+
+            <button type="submit"
+                            class="add-btn">
+
+                Add To Cart
+
+            </button>
+
+        </form>
+
+        <br>
+
+                        <!-- EDIT -->
+                        
+            <a th:href=
+               "@{/editProduct/{id}(id=${product.id})}">
+
+                <button class="edit-btn">
+                    Edit
+                </button>
+
+            </a>
+                         <!-- DELETE -->
+                         
+            <a th:href=
+               "@{/deleteProduct/{id}(id=${product.id})}">
+
+                <button class="delete-btn">
+                    Delete
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+    
+  </div>
+  
+</div>
+
+</body>
+</html>

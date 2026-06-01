@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>Cart</title>
+
+
+<link rel="stylesheet"
+      th:href="@{/css/cart.css}">   
+<link rel="stylesheet"
+          th:href="@{/css/navbar.css}">
+</head>
+
+<body>
+
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+
+    <h1>Your Cart</h1>
+
+    <table border="1"
+           width="100%"
+           cellpadding="10">
+
+        <tr>
+
+            <th>Product</th>
+
+            <th>Price</th>
+
+            <th>Quantity</th>
+
+            <th>Action</th>
+
+        </tr>
+
+        <tr th:each=
+            "item : ${cartItems}">
+
+            <td th:text=
+                "${item.product.name}">
+            </td>
+
+            <td th:text=
+                "${item.product.price}">
+            </td>
+
+            <td>
+
+<form th:action=
+      "@{/updateQuantity/{id}(id=${item.id})}"
+
+      method="post">
+
+    <input type="number"
+           name="quantity"
+           th:value="${item.quantity}"
+           min="1">
+
+    <button type="submit">
+
+        Update
+
+    </button>
+
+</form>
+
+</td>
+
+            <td>
+
+                <a th:href=
+                "@{/removeCartItem/{id}
+                (id=${item.id})}">
+
+                    Remove
+
+                </a>
+
+            </td>
+
+        </tr>
+
+    </table>
+    
+    <h2>
+
+    Total Price :
+    ₹ <span th:text="${total}"></span>
+
+</h2>
+
+        <br>
+
+    <!-- CHECKOUT BUTTON -->
+
+   <div class="checkout-btn-container">
+
+    <a href="/checkout">
+
+        <button class="checkout-btn">
+
+            Checkout
+
+        </button>
+
+    </a>
+
+</div>
+       
+
+</div>
+
+</body>
+</html>

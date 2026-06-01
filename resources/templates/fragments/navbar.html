@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th=
+"http://www.thymeleaf.org">
+
+<head>
+
+    <link rel="stylesheet"
+          th:href="@{/css/navbar.css}">
+
+</head>
+
+<body>
+
+<div th:fragment="navbar">
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            ShopEzzy
+
+        </div>
+
+        <!-- LINKS -->
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/products">
+                Products
+            </a>
+
+            <a href="/cart">
+                Cart
+            </a>
+
+            <a href="/orders">
+                Orders
+            </a>
+
+            <a href="/login">
+                Login
+            </a>
+
+            <a href="/register">
+                Register
+            </a>
+
+            <!-- USERNAME -->
+
+            <span class="user-name"
+                  th:if="${username != null}">
+
+                Hello,
+                <span th:text="${username}">
+                </span>
+
+            </span>
+
+            <!-- LOGOUT -->
+
+            <form th:action="@{/logout}"
+                  method="post"
+
+                  class="logout-form">
+
+                <button type="submit"
+                        class="logout-btn">
+
+                    Logout
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </nav>
+
+</div>
+
+</body>
+</html>

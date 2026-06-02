@@ -1,4 +1,5 @@
 ShopEzzy – E-Commerce Shopping Application:
+
 Tech Stack: Java, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Spring Security, Thymeleaf, MySQL, Maven, HTML5, CSS3
 
 Developed a full-stack e-commerce application with secure user authentication, product management, shopping cart, checkout, and order tracking functionalities.
